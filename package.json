@@ -1,7 +1,6 @@
 {
   "name": "store",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
@@ -12,5 +11,14 @@
     "body-parser": "^1.20.1",
     "express": "^4.18.2",
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nodara/express-store-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nodara/express-store-app/issues"
+  },
+  "homepage": "https://github.com/Nodara/express-store-app#readme",
+  "description": ""
 }

@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { forEach } = require('./store');
 const store = require('./store');
 
 // fetch data
@@ -71,6 +72,32 @@ router.put('/:name', (req, res) => {
 });
 
 // delete
+/*router.delete('/:name', (req, res) => {
+  const { name } = req.params;
+
+  const item = store.find((e) => e.name === name);
+
+  if (item) {
+    item.isDeleted = true;
+
+    console.log(store)
+
+    return res.json({
+      message: 'deleted successfully',
+    })
+  }
+
+
+  return res.json({
+    message: 'product could not found'
+  })
+
+});*/
+
+
+
+//first task:  Return items, that are not deleted
+
 router.delete('/:name', (req, res) => {
   const { name } = req.params;
 
@@ -93,4 +120,37 @@ router.delete('/:name', (req, res) => {
 
 });
 
-module.exports = router;
+
+router.get('/', (req, res)=>{
+  const{query}=req;
+  const {activeItems}=query;
+})
+
+//second task: deleting whole data in the store:
+
+
+router.delete
+('/:name', (req, res, next) => {
+  const { name } = req.params;
+
+
+  const item = store.find((e) => e.name === name);
+
+  forEach (store.name<=store.length);
+  {delete store.name}
+  
+
+    
+
+    return res.json({
+      message: 'store is empty',
+    })
+  }
+  
+    
+  
+
+,module.exports = route);
+
+//third task -edited items: ??
+
